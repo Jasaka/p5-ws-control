@@ -3,8 +3,111 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ADMIN PANEL</title>
+	<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+	<script src="https://cdn.socket.io/4.4.0/socket.io.min.js"
+					integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj"
+					crossorigin="anonymous"></script>
 </head>
-<body>
-ADMIN
+<body class="bg-gray-800">
+<header>
+	<div class="md:flex md:items-center md:justify-between mt-12 mx-12">
+		<div class="min-w-0 flex-1">
+			<h2 class="text-2xl font-bold leading-7 text-white sm:truncate sm:text-3xl sm:tracking-tight">Cornucopia of
+				Information Administration</h2>
+		</div>
+		<dl class="grid grid-cols-1 gap-5 sm:grid-cols-3">
+			<div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6">
+				<dt class="truncate text-sm font-medium text-gray-500">Next Action</dt>
+				<dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900" id="nextActionTooltip">Enter</dd>
+			</div>
+
+			<div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6">
+				<dt class="truncate text-sm font-medium text-gray-500">Current Status</dt>
+				<dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900" id="currentStatusText">Initial</dd>
+			</div>
+		</dl>
+	</div>
+	<hr class="mt-12 mx-12">
+</header>
+<main class="flex flex-col items-center">
+	<div class="mt-6 w-1/2 flow-root bg-white rounded p-8">
+		<ul role="list" class="-my-5 divide-y divide-gray-200">
+			<li class="py-5">
+				<div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+					<h3 class="text-sm font-semibold text-gray-800 text-center">
+						Start
+					</h3>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">Enter: Start Up the Information Chaos</p>
+				</div>
+			</li>
+
+			<li class="py-5">
+				<div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+					<h3 class="text-sm font-semibold text-gray-800 text-center">
+						Scene 1
+					</h3>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">Q: A lot of chaos in corresponding nodes.</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">A: A medium amount of chaos in corresponding nodes.</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">Y: No Chaos in corresponding nodes.</p>
+				</div>
+			</li>
+
+			<li class="py-5">
+				<div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+					<h3 class="text-sm font-semibold text-gray-800 text-center">
+						Scene 2
+					</h3>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">W: A lot of chaos in corresponding nodes.</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">S: A medium amount of chaos in corresponding nodes.</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">X: No Chaos in corresponding nodes.</p>
+				</div>
+			</li>
+
+			<li class="py-5">
+				<div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+					<h3 class="text-sm font-semibold text-gray-800 text-center">
+						Scene 3
+					</h3>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">E: A lot of chaos in corresponding nodes.</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">D: A medium amount of chaos in corresponding nodes.</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">C: No Chaos in corresponding nodes.</p>
+				</div>
+			</li>
+
+			<li class="py-5">
+				<div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+					<h3 class="text-sm font-semibold text-gray-800 text-center">
+						Scene 4
+					</h3>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">R: A lot of chaos in corresponding nodes.</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">F: A medium amount of chaos in corresponding nodes.</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">V: No Chaos in corresponding nodes.</p>
+				</div>
+			</li>
+
+			<li class="py-5">
+				<div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+					<h3 class="text-sm font-semibold text-gray-800 text-center">
+						Scene 5
+					</h3>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">T: A lot of chaos in corresponding nodes.</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">G: A medium amount of chaos in corresponding nodes.</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">B: No Chaos in corresponding nodes.</p>
+				</div>
+			</li>
+
+			<li class="py-5">
+				<div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+					<h3 class="text-sm font-semibold text-gray-800 text-center">
+						Finale
+					</h3>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">Space: Let Visuals pulse</p>
+					<p class="mt-1 text-sm text-gray-600 line-clamp-2">Esc: Let all nodes</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</main>
+<script src="public/js/admin.js"></script>
 </body>
 </html>
