@@ -101,17 +101,23 @@ function generateNodes() {
             if ((r % 2 === 0 && c % 2 !== 0) || (r % 2 !== 0 && c % 2 === 0)) {
                 noStroke();
                 fill(...fillColors[sceneIndex]);
+                if (special === 1) {
+                    // random number between 0 and 2
+                    const randomIndex = Math.floor(Math.random() * 3);
+                    fill(...fillColors[randomIndex]);
+                }
                 rect(x, y, 2, 15);
             } else {
                 fill(0, 0, 0);
                 stroke(...strokeColors[sceneIndex]);
+                if (special === 1) {
+                    // random number between 0 and 2
+                    const randomIndex = Math.floor(Math.random() * 3);
+                    stroke(...strokeColors[randomIndex]);
+                }
                 strokeWeight(2);
                 ellipse(x, y, 10, 15);
             }
         }
     }
-}
-
-function pulseNodes() {
-    return
 }
